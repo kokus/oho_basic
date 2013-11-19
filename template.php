@@ -36,3 +36,42 @@ function oho_basic_id_safe($string) {
   }
   return $string;
 }
+
+
+
+/**
+* Implements hook_page_alter().
+*/
+function oho_basic_page_alter($page) {
+  // Add meta tag for viewport, for easier responsive theme design.
+  $viewport = array(
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'name' => 'viewport',
+      'content' => 'width=device-width, initial-scale=1, user-scalable=yes',
+    ),
+  );
+
+  $html5shiv = array(
+    '#tag' => 'script',
+    '#attributes' => array( // Set up an array of attributes inside the tag
+      'src' => drupal_get_path('theme', 'oho_basic') . 'js/html5shiv.js', 
+    ),
+    '#prefix' => '<!--[if lte IE 9]>',
+    '#suffix' => '</script><![endif]-->',
+  );
+
+ /* $respond = array(
+    '#tag' => 'script',
+    '#attributes' => array( // Set up an array of attributes inside the tag
+      'src' => drupal_get_path('theme', 'oho_basic') . 'js/respond.min.js', 
+    ),
+    '#prefix' => '<!--[if lte IE 9]>',
+    '#suffix' => '</script><![endif]-->',
+  ); */
+
+  drupal_add_html_head($viewport, 'viewport');
+  drupal_add_html_head($html5shiv, 'html5shiv');
+  //drupal_add_html_head($respond, 'respond');
+}

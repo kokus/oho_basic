@@ -4,7 +4,7 @@
 name = OHO Basic
 description = OHO Interactive base theme
 screenshot = oho-basic.png
-version = 1.0
+version = 2.0
 core = 7.x
 
 
@@ -38,6 +38,7 @@ features[] = primary_links
 
 stylesheets[all][] = css/lib.css
 stylesheets[all][] = css/grid.css
+stylesheets[all][] = css/grid-responsive.css
 stylesheets[all][] = css/main.css
 
 scripts[] = js/lib.js
