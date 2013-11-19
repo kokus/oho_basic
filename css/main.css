@@ -1,0 +1,95 @@
+/* LAYOUT */
+
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+#page {
+  margin-left: auto;
+  margin-right: auto;
+  width: 975px;
+}
+
+#content, .two-sidebars #content{
+	width: 575px;
+	float: left;
+	padding-bottom: 20px;
+}
+
+.sidebar-left #content{
+	width: 775px;
+}
+
+.sidebar-right #content{
+	width: 775px;
+}
+
+.no-sidebars #content{
+	width: 975px;
+}
+
+#sidebar-left{
+	float: left;
+	width: 200px;
+}
+
+#sidebar-right{
+	float: left;
+	width: 200px;
+
+}
+
+#footer{
+	clear: both;
+}
+
+/* GENERAL Styles 
+----------------------------*/
+
+/* When declaring Link states, remember: LoVe HA : Link | Hover | Visited | Active */
+
+a:link, a:visited {
+  color: blue;
+  text-decoration:none;
+}
+
+a:hover, a:active {
+  color: red;
+  text-decoration:underline;
+}
+
+/* Titles  */
+
+h1{
+	font-size:2em;
+	line-height:1.3em;
+	margin-bottom:0.5em;
+	margin-top:0pt;
+}
+
+/* tables  */
+
+table {
+	width: 99%;
+}
+tr.even td, tr.odd td {
+	padding: 10px 5px;
+}
+tr.even {
+	background-color: #f5f8ff;
+}
+tr.odd {
+	background-color: #fff;
+}
+
+/* Code */
+
+pre, code {
+	background-color:#efefef;
+	display:block;
+	padding:5px;
+	margin:5px 0;
+	border:1px solid #aaa;
+  font-family: "Bitstream Vera Sans Mono", "Courier New", monospace;
+}

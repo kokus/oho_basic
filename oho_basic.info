@@ -1,0 +1,45 @@
+; OHO Basic .info file
+; More information on .info files can be found here: http://drupal.org/node/171205
+
+name = OHO Basic
+description = OHO Interactive base theme
+screenshot = oho-basic.png
+version = 1.0
+core = 7.x
+
+
+; Regions
+; -------------------------
+; Content, help, page_top, and page_bottom are mandatory
+
+regions[header] = Header
+regions[sidebar_first] = Left sidebar
+regions[content_top] = Content Top
+regions[content] = Content
+regions[content_bottom] = Content Bottom
+regions[sidebar_second] = Right sidebar
+regions[footer] = Footer
+regions[help] = Help
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+regions[highlighted] = Highlighted
+
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = search
+features[] = favicon
+features[] = primary_links
+
+; disabled features, uncomment to activate
+; features[] = secondary_links
+
+stylesheets[all][] = css/lib.css
+stylesheets[all][] = css/grid.css
+stylesheets[all][] = css/main.css
+
+scripts[] = js/lib.js
+
+php = 4.3.3
